@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Profile</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            font-family: 'Pretendard', sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 슬라이드 애니메이션 */
+        .card {
+            background: #1a1a1a;
+            width: 92%;
+            max-width: 420px;
+            padding: 30px;
+            border-radius: 26px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            transform: translateY(100px);
+            opacity: 0;
+            animation: slideIn 0.9s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(80px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* 프로필 사진 */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 25px;
+            object-fit: cover;
+            border: 3px solid #ffffff22;
+            margin-bottom: 20px;
+        }
+
+        /* 이름 */
+        .username {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        /* 연락처 */
+        .contact {
+            font-size: 15px;
+            color: #cccccc;
+            margin-bottom: 25px;
+        }
+
+        /* 버튼 */
+        .btn {
+            padding: 15px 0;
+            width: 100%;
+            background: #ffffff15;
+            border-radius: 15px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #ffffff25;
+            transform: translateY(-2px);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="profile.jpg" class="profile-img">
+
+        <div class="username">당신의 이름</div>
+        <div class="contact">전화번호 · 이메일 등</div>
+
+        <div class="btn" onclick="location.href='write.html'">글쓰기</div>
+    </div>
+
+</body>
+</html>
